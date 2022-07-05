@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">Hello world</h1>
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+    <script>
+        let title = document.getElementById("title");
+        console.log(title);
+        let box = document.getElementsByClassName("box")[0];
+        // box.forEach(function (b) {
+        //     console.log(b);
+        // });
+        // for (let i = 0; i < box.length; i++) {
+        //     console.log(box[i]);
+        // }
+        console.log(box);
+    </script>
+</body>
+
+</html>
