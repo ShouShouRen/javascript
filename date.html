@@ -18,13 +18,10 @@
     let date = d.getDate();
     // [0,1,2,3,4,5,6]
     let day = d.getDay();
-
-    if(day == 0){
-        day = "日"
-    }
+    let dayArray = ["日","一","二","三","四","五","六"];
     console.log(year);
     console.log(month);
     console.log(date);
-    console.log(day);
+    console.log(dayArray[day]);
 </script>
 </html>
