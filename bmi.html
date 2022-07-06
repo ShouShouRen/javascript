@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    身高
+    <input type="text" name="" id="height">
+    體重
+    <input type="text" name="" id="weight">
+    <button id="cal" onclick="bmi()">計算</button>
+    <div id="output"></div>
+</body>
+<script>
+
+    function bmi() {
+        let height = document.querySelector("#height").value;
+        let weight = document.querySelector("#weight").value;
+        let cal = document.querySelector("#cal");
+        console.log(height);
+        console.log(weight);
+    }
+</script>
+
+</html>

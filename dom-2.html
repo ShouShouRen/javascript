@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">hello world</h1>
+    <button id="c1">click 1</button>
+    <button  id="c1">click 2</button>
+    <button  id="c1">reset</button>
+</body>
+<script>
+    function test() {
+        let title = document.querySelector("#title");
+        title.style.color = "red";
+        title.style.backgroundColor = "blue";
+        title.style.width = "100px";
+        title.style.height = "200px";
+    }
+    function test2() {
+        let title = document.querySelector("#title");
+        title.style.color = "green";
+        title.style.backgroundColor = "red";
+        title.style.width = "200px";
+        title.style.height = "100px";
+    }
+    function test3() {
+        let title = document.querySelector("#title");
+        title.style.color = "black";
+        title.style.backgroundColor = "";
+        title.style.width = "40px";
+        title.style.height = "80px";
+    }
+
+    let c1 = document.querySelector("#c1");
+    let c2 = document.querySelector("#c2");
+    let c3 = document.querySelector("#c3");
+    // let c1 = document.getElementById("c1");
+    // let c2 = document.getElementById("c2");
+    // let c3 = document.getElementById("c3");
+
+    // c1.addEventListener("click", function () {
+    //     test();
+    // });
+    // c2.addEventListener("click", function () {
+    //     test2();
+    // });
+    // c3.addEventListener("click", function () {
+    //     test3();
+    // });
+
+    c1.addEventListener("click",test);
+    c2.addEventListener("click",test2);
+    c3.addEventListener("click",test3);
+</script>
+
+</html>
