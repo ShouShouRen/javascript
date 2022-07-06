@@ -16,20 +16,15 @@
     <button id="cal">計算</button>
     <div id="output"></div>
 </body>
-
 <script>
-    function bmi() {
-        let height = document.querySelector("#height").value / 100;
-        let weight = document.querySelector("#weight").value;
-        let b = weight / Math.pow(height, 2);
-        let output = document.querySelector("#output").textContent = Math.floor(b * 100) / 100;
+    function bmi(w, h) {
+        let b = w / Math.pow(h / 100, 2);
+        document.querySelector("#output").textContent = Math.floor(b * 100) / 100;
     }
-
     let cal = document.querySelector("#cal");
-    cal.addEventListener("click", bmi);
-    // cal.addEventListener("click", function () {
-    //     bmi();
-    // });
+    cal.addEventListener("click", function () {
+        bmi(document.querySelector("#weight").value,document.querySelector("#height").value);
+    })
 </script>
 
 </html>
