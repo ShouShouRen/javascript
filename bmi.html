@@ -13,18 +13,24 @@
     <input type="text" name="" id="height" placeholder="請輸入公分">
     體重
     <input type="text" name="" id="weight" placeholder="請輸入公斤">
-    <button id="cal" onclick="bmi()">計算</button>
+    <button id="cal">計算</button>
     <div id="output"></div>
 </body>
 <script>
 
+
     function bmi() {
         let height = document.querySelector("#height").value / 100;
         let weight = document.querySelector("#weight").value;
-        let cal = document.querySelector("#cal");
-        let b = weight / Math.pow(height,2);
+        let b = weight / Math.pow(height, 2);
         let output = document.querySelector("#output").textContent = Math.floor(b * 100) / 100;
     }
+
+    let cal = document.querySelector("#cal");
+    cal.addEventListener("click", bmi);
+    // cal.addEventListener("click", function () {
+    //     bmi();
+    // });
 </script>
 
 </html>
