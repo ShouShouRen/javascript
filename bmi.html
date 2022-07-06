@@ -22,12 +22,8 @@
         let height = document.querySelector("#height").value / 100;
         let weight = document.querySelector("#weight").value;
         let cal = document.querySelector("#cal");
-        let output = document.querySelector("#output");
-
-        let b = weight / (height * height);
-        console.log(b);
-        // console.log(height);
-        // console.log(weight);
+        let b = weight / Math.pow(height,2);
+        let output = document.querySelector("#output").textContent = Math.floor(b * 100) / 100;
     }
 </script>
 
