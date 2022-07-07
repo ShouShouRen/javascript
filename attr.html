@@ -8,9 +8,14 @@
 </head>
 <body>
     <h1 id="title" data-key="555" data-value="456" data-control="toggle">title</h1>
+    <img src="" alt="">
 </body>
 <script>
     let t = document.querySelector("#title");
-    console.log(t.dataset.key);
+    // console.log(t.dataset.key);
+    // console.log(t.getAttribute("id"));
+    // console.log(t.getAttribute("data-value"));
+    // console.log(t.getAttribute("data-toggle"));
+    t.setAttribute("class", "test");
 </script>
 </html>
