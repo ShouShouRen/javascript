@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+    <input id="pw" type="password">
+    <button onclick="pwSwitch()"><i class="fa-solid fa-eye" id="show"></i></button>
+</body>
+<script>
+    function pwSwitch() {
+        let pw = document.getElementById("pw");
+        let pwAtr = pw.getAttribute("type");
+        let show = document.getElementById("show");
+        console.log(pwAtr);
+        // if(pwAtr == "text"){
+        //     pw.setAttribute("type", "password");
+        // }else{
+        //     pw.setAttribute("type","text");
+        // }
+        switch(pwAtr){
+            case "text":
+                pw.setAttribute("type","password");
+                show.setAttribute("class","fa-solid fa-eye-slash");
+                break;
+            case "password":
+                pw.setAttribute("type","text");
+                show.setAttribute("class","fa-solid fa-eye");
+                break;
+        }
+    }
+</script>
+
+</html>
