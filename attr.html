@@ -5,10 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .test{
+            color: #f00;
+        }
+        .test2{
+            color: #0af;
+        }
+    </style>
 </head>
 <body>
     <h1 id="title" data-key="555" data-value="456" data-control="toggle">title</h1>
-    <img src="" alt="">
+    <input type="text" id="q">
 </body>
 <script>
     let t = document.querySelector("#title");
@@ -16,6 +24,7 @@
     // console.log(t.getAttribute("id"));
     // console.log(t.getAttribute("data-value"));
     // console.log(t.getAttribute("data-toggle"));
-    t.setAttribute("class", "test");
+    t.setAttribute("class", "test2");
+    document.getElementById("q").setAttribute("type", "password")
 </script>
 </html>
