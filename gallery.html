@@ -35,7 +35,7 @@
 </body>
 <script>
     let thumb = document.querySelectorAll(".thumb")
-    console.log(thumb);
+    // console.log(thumb);
     thumb.forEach(function (t) {
         // console.log(t.getAttribute("src"));
         // console.log(t.dataset.img);
@@ -45,8 +45,8 @@
             // console.log(this.getAttribute("src"));
             // console.log(g.src);
             g.setAttribute("src",this.getAttribute("src"));
+            console.log(g.getAttribute("src"));
         })
     })
 </script>
-
 </html>
