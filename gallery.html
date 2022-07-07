@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        img{
+        img {
             width: 100%;
         }
-        .gallery{
+
+        .gallery {
             width: 500px;
         }
+
         .thumbs img {
             width: 100px;
             cursor: pointer;
         }
     </style>
 </head>
+
 <body>
     <div class="gallery">
         <img src="./images/001.jpg" alt="">
     </div>
     <div class="thumbs">
-        <img src="./images/001.jpg" alt="">
-        <img src="./images/002.jpg" alt="">
-        <img src="./images/003.jpg" alt="">
-        <img src="./images/004.jpg" alt="">
+        <img src="./images/001.jpg" class="thumb" data-img="001">
+        <img src="./images/002.jpg" class="thumb" data-img="002">
+        <img src="./images/003.jpg" class="thumb" data-img="003">
+        <img src="./images/004.jpg" class="thumb" data-img="004">
     </div>
 </body>
+<script>
+    let thumb = document.querySelectorAll(".thumb")
+    console.log(thumb);
+    thumb.forEach(function (t) {
+        // console.log(t.getAttribute("src"));
+        console.log(t.dataset.img);
+    })
+</script>
+
 </html>
