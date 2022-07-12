@@ -13,8 +13,10 @@
             // parent()找父代元素
             // parents() 尋找長輩元素  可指定也可不只定
             // closest() 找長輩元素  需指定
-            // next () pre
-            let t = $(".container").children().siblings(".title");
+            // next () prev() 下一個同輩元素    上一個同輩元素
+            // eq() 尋找同輩元素，需指定陣列索引
+            // siblings() 尋找同輩元素，可指定也可不指定
+            let t = $("li").parent().siblings("#title");
             console.log(t);
         });
     </script>
@@ -23,7 +25,6 @@
     <div class="container">
         <h1 id="title">title</h1>
         <ul class="nav">
-            <div></div>
             <li><a href="#">link1</a></li>
             <li><a href="#">link2</a></li>
             <li><a href="#">link3</a></li>
