@@ -10,7 +10,11 @@
         $(document).ready(function () {
             // find()找後代元素 需指定元素   children()找子代元素 可指定也可不只定
             // let t = $(".nav").children("li");
-            let t = $(".nav").parent();
+            // parent()找父代元素
+            // parents() 尋找長輩元素  可指定也可不只定
+            // closest() 找長輩元素  需指定
+            // next () pre
+            let t = $(".container").children().siblings(".title");
             console.log(t);
         });
     </script>
@@ -20,10 +24,10 @@
         <h1 id="title">title</h1>
         <ul class="nav">
             <div></div>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
+            <li><a href="#">link1</a></li>
+            <li><a href="#">link2</a></li>
+            <li><a href="#">link3</a></li>
+            <li><a href="#">link4</a></li>
         </ul>
     </div>
 </body>
