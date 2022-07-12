@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="item">
+    <button id="btn" onclick="newItem()">add</button>
+    <ul id="todos">
+        <li>test</li>
+    </ul>
+</body>
+<script>
+    function newItem(){
+        let item = document.getElementById("item").value;
+        let itemText = document.createTextNode(item);
+        let li = document.createElement("li");
+        li.appendChild(itemText);
+
+        let todos = document.getElementById("todos");
+        todos.appendChild(li);
+        document.getElementById("item").value = "";
+        
+    }
+</script>
+</html>
