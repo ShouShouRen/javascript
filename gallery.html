@@ -36,17 +36,27 @@
 <script>
     let thumb = document.querySelectorAll(".thumb")
     // console.log(thumb);
-    thumb.forEach(function (t) {
+    // thumb.forEach(function (t) {
         // console.log(t.getAttribute("src"));
         // console.log(t.dataset.img);
-        t.addEventListener("click", function () {
-            let g = document.querySelector("#g");
+        // t.addEventListener("click", function () {
+            // let g = document.querySelector("#g");
             // console.log(this.dataset.img);
             // console.log(this.getAttribute("src"));
             // console.log(g.src);
+
+
+    //         g.setAttribute("src",this.getAttribute("src"));
+    //         g.setAttribute("src",`images/${this.dataset.img}.jpg`);
+    //         console.log(g.getAttribute("src"));
+    //     })
+    // })
+    for(let i = 0; i<thumb.length; i++){
+        thumb[i].addEventListener("click",function () { 
+            let g = document.querySelector("#g");
+            // g.src = `images/${this.dataset.img}.jpg`;
             g.setAttribute("src",this.getAttribute("src"));
-            console.log(g.getAttribute("src"));
-        })
-    })
+         })
+    }
 </script>
 </html>
