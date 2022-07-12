@@ -11,13 +11,24 @@
         // $("h1").hide();
         // $("#t").hide();
         $(document).ready(function () {
-            $(".title").hide();
+            // $(".btn").click(function(){
+            //     $("p").hide(1000);
+            // })
+            $(".btn").click(function () {
+                // $("p").toggle(1000);
+                $("p").fadeToggle(1200);
+                $("p").slideToggle(1200);
+            })
         });
     </script>
 </head>
 
 <body>
-    <h1 class="title" id="t">title</h1>
+    <!-- <h1 class="title" id="t">title</h1> -->
+    <button class="btn">click</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum voluptatem eveniet, soluta cumque in eum
+        cupiditate, inventore quibusdam quod praesentium esse, et pariatur id sed voluptates eius perferendis quos eos.
+    </p>
 </body>
 
 </html>

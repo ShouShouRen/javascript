@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").hide();
+            $("h2").click(function () {
+                $(this).next().slideToggle();
+            })
+        });
+    </script>
+    <style>
+        .container {
+            width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>title</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, omnis eveniet eius quia fuga corporis
+            dignissimos quidem ipsam tempore necessitatibus.</p>
+        <h2>title</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, omnis eveniet eius quia fuga corporis
+            dignissimos quidem ipsam tempore necessitatibus.</p>
+        <h2>title</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, omnis eveniet eius quia fuga corporis
+            dignissimos quidem ipsam tempore necessitatibus.</p>
+        <h2>title</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, omnis eveniet eius quia fuga corporis
+            dignissimos quidem ipsam tempore necessitatibus.</p>
+
+    </div>
+</body>
+
+</html>
