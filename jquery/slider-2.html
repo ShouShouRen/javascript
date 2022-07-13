@@ -29,6 +29,7 @@
         }
 
         .photo {
+            width: 1200px;
             height: 400px;
             float: left;
         }
@@ -46,7 +47,7 @@
 
             function move() {
                 $(".wrapper").animate({
-                    marginLeft: photoWidth * (-1)
+                    marginLeft: -(photoWidth * currentPosition)
                 })
             }
             function cycle() {
@@ -55,7 +56,9 @@
                 }else{
                     currentPosition++;
                 }
+                move();
             }
+            setInterval(cycle,1500);
         })
     </script>
 </head>

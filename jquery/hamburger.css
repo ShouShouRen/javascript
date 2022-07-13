@@ -1,0 +1,19 @@
+.hamburger {
+    height: 50px;
+    width: 50px;
+    background-color: #eee;
+    position: relative;
+}
+.hamburger span {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #333;
+    border-radius: 12px;
+}

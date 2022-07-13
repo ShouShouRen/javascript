@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hamburger.css">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        @media (min-width:600px) {
+
+            nav {
+                width: 100%;
+                height: 50px;
+                background-color: #333;
+                line-height: 50px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .logo {
+                float: left;
+            }
+
+            .logo a {
+                text-decoration: none;
+                color: #eee;
+
+            }
+
+            .menu {
+                float: right;
+            }
+
+            .menu li {
+                float: left;
+                list-style: none;
+            }
+
+            .menu a {
+                text-decoration: none;
+                color: #eee;
+                margin: 0 15px;
+            }
+        }
+
+        @media(max-width: 600px) {
+            nav {
+                width: 100%;
+                /* height: 50px; */
+                background-color: #333;
+                line-height: 50px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+
+            .logo a {
+                text-decoration: none;
+                color: #eee;
+
+            }
+
+
+            .menu li {
+                list-style: none;
+            }
+
+            .menu a {
+                text-decoration: none;
+                color: #eee;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="hamburger"><span></span></div>
+        <div class="logo">
+            <a href="#">logo</a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">WORKS</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+
+</html>
