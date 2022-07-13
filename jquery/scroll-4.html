@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Document</title>
     <style>
         * {
-            font-family: serif;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             box-sizing: border-box;
             padding: 0;
             margin: 0;
@@ -98,13 +98,14 @@
                 if (h > 1200) {
                     // $("#gotop").fadeIn();
                     $("#gotop").removeClass();
-                    $("#gotop").addClass("top-show");
+                    $("#gotop").addClass("animate__animated animate__bounce");
                 } else {
                     // $("#gotop").fadeOut();
                     $("#gotop").removeClass();
-                    $("#gotop").addClass("top-hide");
+                    $("#gotop").addClass("animate__animated animate__fadeOut");
                 }
             });
+            
         })
     </script>
 </head>
