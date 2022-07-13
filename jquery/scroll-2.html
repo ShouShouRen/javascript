@@ -88,13 +88,14 @@
                 $("html,body").animate({
                     scrollTop: 0
                 })
+                return false;
             })
             $(window).scroll(function () {
                 let h = $("html,body").scrollTop();
                 console.log(h);
                 if (h > 1200) {
                     $("#gotop").fadeIn();
-                }else{
+                } else {
                     $("#gotop").fadeOut();
                 }
             });
@@ -104,11 +105,11 @@
 
 <body>
     <nav>
-        <a href="#" data-target="#about">ABOUT|</a>
-        <a href="#" data-target="#service">SERVICE|</a>
-        <a href="#" data-target="#product">PRODUCT|</a>
-        <a href="#" data-target="#domate">DOMATE|</a>
-        <a href="#" data-target="#contact">CONTACT</a>
+        <a href="javascript:void(0)" data-target="#about">ABOUT|</a>
+        <a href="javascript:void(0)" data-target="#service">SERVICE|</a>
+        <a href="javascript:void(0)" data-target="#product">PRODUCT|</a>
+        <a href="javascript:void(0)" data-target="#domate">DOMATE|</a>
+        <a href="javascript:void(0)" data-target="#contact">CONTACT</a>
     </nav>
     <div id="about">ABOUT</div>
     <div id="service">SERVICE</div>
@@ -116,7 +117,7 @@
     <div id="domate">DOMATE</div>
     <div id="contact">CONTACT</div>
     <div href="#" id="gotop">
-        <a href="#" class="fas fa-angle-up"></a>
+        <a href="javascript:void(0)" class="fas fa-angle-up"></a>
     </div>
 </body>
 
