@@ -67,9 +67,12 @@
             bottom: 15px;
             text-align: center;
             line-height: 40px;
-            z-index: 10;
+            display: none;
         }
-        
+
+        #gotop a {
+            color: #fff;
+        }
     </style>
     <script>
         $(function () {
@@ -81,11 +84,20 @@
                     scrollTop: _offset
                 })
             })
-            $("#gotop").click(function () { 
+            $("#gotop").click(function () {
                 $("html,body").animate({
                     scrollTop: 0
                 })
-             })
+            })
+            $(window).scroll(function () {
+                let h = $("html,body").scrollTop();
+                console.log(h);
+                if (h > 1200) {
+                    $("#gotop").fadeIn();
+                }else{
+                    $("#gotop").fadeOut();
+                }
+            });
         })
     </script>
 </head>
@@ -104,7 +116,7 @@
     <div id="domate">DOMATE</div>
     <div id="contact">CONTACT</div>
     <div href="#" id="gotop">
-        <a href="#" class="fas fa-angle-up fa-3x"></a>
+        <a href="#" class="fas fa-angle-up"></a>
     </div>
 </body>
 
