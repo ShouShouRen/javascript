@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: serif;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav {
+            position: fixed;
+            background-color: #fff;
+            font-size: 24px;
+            text-align: center;
+            width: 100%;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #233;
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+
+        div {
+            height: 1200px;
+            font-size: 26px;
+        }
+
+        #about {
+            background-color: #0af;
+        }
+
+        #service {
+            background-color: #fa0;
+        }
+
+        #product {
+            background-color: #e04;
+        }
+
+        #domate {
+            background-color: #233;
+        }
+
+        #contact {
+            background-color: #fe0;
+        }
+
+        #gotop {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 50%;
+            position: fixed;
+            right: 15px;
+            bottom: 15px;
+            text-align: center;
+            line-height: 40px;
+            display: none;
+        }
+
+        #gotop a {
+            color: #fff;
+        }
+        .top-show {
+            transform: scale(1);
+        }
+        .top-hide{
+            transform: scale(0);
+        }
+    </style>
+    <script>
+        $(function () {
+            $("nav").find("a").click(function () {
+                let target = $(this).data("target");
+                let _offset = $(target).offset().top;
+                // console.log(_offset);
+                $("html,body").animate({
+                    scrollTop: _offset
+                })
+            })
+            $("#gotop").click(function () {
+                $("html,body").animate({
+                    scrollTop: 0
+                })
+                return false;
+            })
+            $(window).scroll(function () {
+                let h = $("html,body").scrollTop();
+                console.log(h);
+                if (h > 1200) {
+                    // $("#gotop").fadeIn();
+                    $("#gotop").addClass("top-show");
+                } else {
+                    // $("#gotop").fadeOut();
+                    $("#gotop").addClass("top-side");
+                }
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="javascript:void(0)" data-target="#about">ABOUT|</a>
+        <a href="javascript:void(0)" data-target="#service">SERVICE|</a>
+        <a href="javascript:void(0)" data-target="#product">PRODUCT|</a>
+        <a href="javascript:void(0)" data-target="#domate">DOMATE|</a>
+        <a href="javascript:void(0)" data-target="#contact">CONTACT</a>
+    </nav>
+    <div id="about">ABOUT</div>
+    <div id="service">SERVICE</div>
+    <div id="product">PRODUCT</div>
+    <div id="domate">DOMATE</div>
+    <div id="contact">CONTACT</div>
+    <div href="#" id="gotop">
+        <a href="javascript:void(0)" class="fas fa-angle-up"></a>
+    </div>
+</body>
+
+</html>
