@@ -67,17 +67,20 @@
             bottom: 15px;
             text-align: center;
             line-height: 40px;
-            display: none;
+            /* display: none; */
+            transition: all .5s ease-in-out;
         }
 
         #gotop a {
             color: #fff;
         }
-        .top-show {
-            transform: scale(1);
+        #gotop.top-show {
+            right: 15px;
+            transform: rotate(0) scale(1);
         }
-        .top-hide{
-            transform: scale(0);
+        #gotop.top-hide{
+            right: -150px;
+            transform: rotate(180deg) scale(0);
         }
     </style>
     <script>
@@ -101,10 +104,12 @@
                 console.log(h);
                 if (h > 1200) {
                     // $("#gotop").fadeIn();
+                    $("#gotop").removeClass();
                     $("#gotop").addClass("top-show");
                 } else {
                     // $("#gotop").fadeOut();
-                    $("#gotop").addClass("top-side");
+                    $("#gotop").removeClass();
+                    $("#gotop").addClass("top-hide");
                 }
             });
         })
