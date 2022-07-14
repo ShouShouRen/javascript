@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="hamburger.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Document</title>
     <style>
         * {
@@ -49,6 +50,10 @@
                 color: #eee;
                 margin: 0 15px;
             }
+
+            .hamburger {
+                display: none;
+            }
         }
 
         @media(max-width: 600px) {
@@ -68,6 +73,9 @@
 
             }
 
+            .menu {
+                display: none;
+            }
 
             .menu li {
                 list-style: none;
@@ -76,6 +84,11 @@
             .menu a {
                 text-decoration: none;
                 color: #eee;
+            }
+
+            .hamburger {
+                display: block;
+                float: right;
             }
         }
     </style>
@@ -97,5 +110,22 @@
         </div>
     </nav>
 </body>
+<script>
+    $(document).ready(function () {
+        $(window).resize(function(){
+            let w = $(window).width();
+            if(w>600){
+                $(".hamburger").hide();
+                $(".menu").show();
+            }else{
+                $(".hamburger").show();
+                $(".menu").hide();
+            }
+        })
+        $(".hamburger").click(function () {
+            $(".menu").slideToggle();
+        })
+    });
+</script>
 
 </html>
